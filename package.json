@@ -1,8 +1,9 @@
 {
-  "name": "tailadmin-free-nextjs",
+  "name": "plan9-dashboard-nextjs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+		"bun": "bun --bun run dev",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
