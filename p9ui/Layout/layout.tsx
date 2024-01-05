@@ -8,18 +8,22 @@ import Loader from "@/components/common/Loader";
 import Sidebar from "@/components/Sidebar";
 import Header from "@/components/Header";
 
-export default function Layout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+interface LayoutProps {
+	children: React.ReactNode
+	baseUrl?: string
+}
 
+export default function Layout({
+  children, baseUrl
+}: LayoutProps) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     setTimeout(() => setLoading(false), 1000);
   }, []);
+
+	const _url = (uri: string) => `${baseUrl || ''}${uri}`
 
   return (
     <html lang="en">
@@ -33,6 +37,7 @@ export default function Layout({
               <Sidebar
                 sidebarOpen={sidebarOpen}
                 setSidebarOpen={setSidebarOpen}
+								baseUrl={baseUrl}
               />
               {/* <!-- ===== Sidebar End ===== --> */}
 
