@@ -13,6 +13,7 @@ import * as Icons from "@heroicons/react/24/solid";
 interface SidebarProps {
   sidebarOpen: boolean
   setSidebarOpen: (arg: boolean) => void
+	baseUrl?: string
 }
 
 interface SidebarLinkProps {
@@ -79,7 +80,10 @@ function CollapseArrow({ open }: CollapseArrowProps) {
   );
 }
 
-const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
+const Sidebar = ({ sidebarOpen, setSidebarOpen, baseUrl }: SidebarProps) => {
+
+	baseUrl = baseUrl || ''
+
   const pathname = usePathname();
 
   const trigger = useRef<any>(null);
@@ -230,11 +234,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
 
               {/* <!-- Menu Item Calendar --> */}
               <li>
-                <SidebarLink
-                  href="/calendar"
-                  pathname={pathname}
-                  title="Calendar"
-                />
+                <SidebarLink href="/calendar" pathname={pathname} title="Calendar" />
               </li>
               {/* <!-- Menu Item Calendar --> */}
 
