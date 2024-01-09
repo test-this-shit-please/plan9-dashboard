@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
+import Breadcrumb from "@/p9ui/components/Breadcrumbs/Breadcrumb";
 import { Metadata } from "next";
 import * as Icons from "@heroicons/react/24/outline"
 
