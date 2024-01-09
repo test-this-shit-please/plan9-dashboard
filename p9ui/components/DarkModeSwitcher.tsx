@@ -1,5 +1,5 @@
-import useColorMode from '../hooks/useColorMode';
 import * as Icons from "@heroicons/react/24/solid";
+import useColorMode from "@/hooks/useColorMode";
 
 const DarkModeSwitcher = () => {
   const [colorMode, setColorMode] = useColorMode();

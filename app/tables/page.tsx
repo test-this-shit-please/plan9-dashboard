@@ -1,7 +1,7 @@
-import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
-import TableOne from "@/components/Tables/TableOne";
-import TableThree from "@/components/Tables/TableThree";
-import TableTwo from "@/components/Tables/TableTwo";
+import Breadcrumb from "@/p9ui/components/Breadcrumbs/Breadcrumb";
+import TableOne from "@/p9ui/components/Tables/TableOne";
+import TableThree from "@/p9ui/components/Tables/TableThree";
+import TableTwo from "@/p9ui/components/Tables/TableTwo";
 
 import { Metadata } from "next";
 export const metadata: Metadata = {

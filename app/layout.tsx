@@ -3,10 +3,10 @@ import "./globals.css";
 import "./data-tables-css.css";
 import "./satoshi.css";
 import { useState, useEffect } from "react";
-import Loader from "@/components/common/Loader";
+import Loader from "@/p9ui/components/common/Loader";
 
-import Sidebar from "@/components/Sidebar";
-import Header from "@/components/Header";
+import Sidebar from "@/p9ui/components/Sidebar";
+import Header from "@/p9ui/components/Header";
 import Layout from "@/p9ui/Layout/layout";
 
 export default function RootLayout({
